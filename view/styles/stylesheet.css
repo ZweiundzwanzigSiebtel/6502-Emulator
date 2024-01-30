@@ -1,0 +1,6 @@
+/* Hintergrundfarbe der GtkDrawingArea auf Schwarz setzen */
+
+* {
+    padding: 5px;
+    border-color: blue;
+}

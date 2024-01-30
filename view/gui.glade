@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="3.24"/>
+  <object class="GtkWindow" id="window">
+    <property name="visible">1</property>
+    <property name="default_width">900</property>
+    <property name="default_height">600</property>
+    <child>
+      <object class="GtkBox" id="main_box">
+        <property name="orientation">vertical</property>
+        <property name="spacing">10</property>
+        <child>
+          <object class="GtkBox" id="menubar">
+            <property name="orientation">horizontal</property>
+            <child>
+              <object class="GtkButton" id="run_btn">
+                <property name="label">Run</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkButton" id="save_btn">
+                <property name="label">Save</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkPaned" id="horizontal_pane">
+            <property name="orientation">horizontal</property>
+            <property name="position">250</property>
+            <child>
+              <object class="GtkScrolledWindow" id="text_view_scrolled">
+                <child>
+                  <object class="GtkTextView" id="text_view"/>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkPaned" id="vertical_pane">
+                <property name="orientation">vertical</property>
+                <property name="position">150</property>
+                <child>
+                  <object class="GtkDrawingArea" id="drawing_area">
+                    <property name="can_focus">True</property>
+                    <property name="hexpand">True</property>
+                    <property name="vexpand">True</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkScrolledWindow" id="hex_editor_view_scrolled">
+                    <child>
+                      <object class="GtkTextView" id="hex_editor_view"/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
